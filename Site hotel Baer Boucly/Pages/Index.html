@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking HOTEL</title>
+    <link rel="stylesheet" href="../Style/Accueil.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="j">BOOKING HOTEL</h1>
+        <h2 class="j">Indiquez vos dates de réservation - toute annulation doit se faire 48h avant</h2>
+    </header>
+    <div class="megadiv">
+        <div class="sousmegadiv">
+            <form id="Formulaire">
+                <table>
+                    <tr>
+                        <td> <img class="img" src="../Ressources/hotel.jpg" alt="Hotel"></td>
+                        <td>France-Etranger</td>
+                    </tr>
+                    <tr>
+                        <td><label for="info"><strong> Lieu de séjour</strong></label></td>
+                        <td colspan="3"><input type="text" id="info" name="info" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="arrival"> <strong>Arrivée</strong></label></td>
+                        <td><input type="date" id="arrivée" name="arrivée" required></td>
+                        <td><label for="departure">Départ:</label></td>
+                        <td><input type="date" id="départ" name="départ" required></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chambre</strong></td><td id="D">0</td>
+                        <td><button type="button" class="bouton" onclick="augmente('D')">+</button></td>
+                        <td><button type="button" class="bouton" onclick="enleve('D')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adulte</strong></td><td id="A">0</td>
+                        <td><button type="button" class="bouton" onclick="augmente('A')">+</button></td>
+                        <td><button type="button" class="bouton" onclick="enleve('A')">-</button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Enfant</strong></td>
+                        <td id="C">0</td>
+                        <td><button type="button" class="bouton" onclick="augmente('C')">+</button></td>
+                        <td><button type="button" class="bouton" onclick="enleve('C')">-</button></td>
+                        
+                    </tr>
+                    <tr id="agesEnfants">
+                        <td colspan="5"><h3 id="ageEnfantsTitre" style="display: none;">Âge des enfants</h3></td>
+                    </tr>
+                    
+                </table><br>
+                
+
+                <input type="checkbox" id="b" name="b">
+                <label for="b">Je voyage pour le travail ?</label><br><br>
+                <button type="button" class="bouton2" onclick="clearForm()">Effacer</button>
+                <button type="submit" class="bouton2">Rechercher</button>
+            </form>
+        </div>
+
+        <div class="resultat">
+            <h2>Résultats de la recherche</h2>
+            <div id="resultat2"></div>
+        </div>
+    </div>
+    <script src="../Js/Accueil.js"></script>
+    <footer class="footer">
+      <p> Indiquez vos dates de réservation - toute annulation doit se faire 48h avant</p> 
+    </footer>
+</body>
+</html>
